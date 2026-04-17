@@ -39,7 +39,7 @@ export const metadata: Metadata = {
       "Depannage rideau metallique a Corbeil-Essonnes 24h/24 7j/7. Intervention en 30 min. Tel : 01 84 18 04 99.",
     images: [
       {
-        url: "/images/gallery/depannage-rideau-metallique-DRM-reparation.webp",
+        url: "/images/gallery/depannage-rideau-metallique-drm-reparation.webp",
         width: 1200,
         height: 630,
         alt: "DRM Corbeil-Essonnes - Depannage rideau metallique",

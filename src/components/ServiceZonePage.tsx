@@ -21,7 +21,7 @@ interface Props {
 }
 
 const serviceHeroImages: Record<string, string> = {
-  depannage: "/images/gallery/depannage-rideau-metallique-DRM-reparation.webp",
+  depannage: "/images/gallery/depannage-rideau-metallique-drm-reparation.webp",
   installation: "/images/gallery/installation-rideau-metallique-drm.webp",
   reparation: "/images/gallery/depannage-rideau-metallique-drm-services.webp",
   motorisation: "/images/gallery/moteur-tubulaire-simu-rideau-metallique.webp",
@@ -35,7 +35,7 @@ const serviceImages2: Record<string, string> = {
   installation: "/images/gallery/installation-rideau-metallique-sur-mesure-france.webp",
   reparation: "/images/gallery/tablier-rideau-metallique.webp",
   motorisation: "/images/gallery/motorisation-rideau-metallique-drm-depannage.webp",
-  deblocage: "/images/gallery/rideau-metallique-deblocage-rideau-metallique.webp",
+  deblocage: "/images/gallery/rideau-metallique-bloque-depannage-rideau-metallique.webp",
   entretien: "/images/gallery/entretien-rideau-metallique-drm-rideau-metallique.webp",
   fabrication: "/images/gallery/fabrication-rideau-metallique-rideau-metallique-france-drm.webp",
 };

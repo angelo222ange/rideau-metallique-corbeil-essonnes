@@ -7,14 +7,12 @@ const COLORS = {
 
 export default function Partners() {
   const marques = [
-    { name: "Somfy", logo: "/images/marques/logo-somfy-rideau-metallique.webp" },
-    { name: "Simu", logo: "/images/marques/logo-simu-rideau-metallique.webp" },
-    { name: "ACM", logo: "/images/marques/logo-ACM-rideau-metallique-drm-france.webp" },
-    { name: "Came", logo: "/images/marques/logo-Came-rideau-metallique.webp" },
-    { name: "Nice", logo: "/images/marques/logo-nice-rideau-metallique.webp" },
-    { name: "FAAC", logo: "/images/marques/logo-faac-rideau-metallique.webp" },
-    { name: "BFT", logo: "/images/marques/logo-bft-rideau-metallique.webp" },
-    { name: "Sommer", logo: "/images/marques/logo-sommer-rideau-metallique.webp" },
+    { name: "Simu", logo: "/images/marques/moteur-simu-rideau-metallique.webp" },
+    { name: "ACM", logo: "/images/marques/moteur-acm-italian-rolling-power.webp" },
+    { name: "Sommer", logo: "/images/marques/logo-sommer-moteur-rideau-metallique.webp" },
+    { name: "AFCA", logo: "/images/marques/logo-afca-moteur-rideau-metallique.webp" },
+    { name: "Masinara", logo: "/images/marques/logo-masinara-moteur-rideau-metallique.webp" },
+    { name: "G-Doorgate", logo: "/images/marques/logo-moteur-g-doorgate-rideau-metallique-drm.webp" },
   ];
 
   return (
@@ -43,12 +41,12 @@ export default function Partners() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(8, 1fr)",
-            gap: 32,
+            gridTemplateColumns: "repeat(6, 1fr)",
+            gap: 40,
             alignItems: "center",
             justifyItems: "center",
           }}
-          data-grid-4
+          data-grid-3
         >
           {marques.map((m) => (
             <img

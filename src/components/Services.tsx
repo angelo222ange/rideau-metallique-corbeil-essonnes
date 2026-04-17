@@ -13,7 +13,7 @@ const serviceImages: Record<string, string> = {
   installation: "/images/gallery/installation-rideau-metallique-sur-mesure-france.webp",
   reparation: "/images/gallery/depannage-rideau-metallique-drm-services.webp",
   motorisation: "/images/gallery/motorisation-rideau-metallique-drm-depannage.webp",
-  deblocage: "/images/gallery/rideau-metallique-deblocage-rideau-metallique.webp",
+  deblocage: "/images/gallery/rideau-metallique-bloque-depannage-rideau-metallique.webp",
   entretien: "/images/gallery/entretien-rideau-metallique-drm-france.webp",
   fabrication: "/images/gallery/fabrication-rideau-metallique-entreprise-drm.webp",
 };

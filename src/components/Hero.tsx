@@ -214,7 +214,7 @@ export default function Hero() {
             }}
           >
             <img
-              src="/images/gallery/depannage-rideau-metallique-DRM-reparation.webp"
+              src="/images/gallery/depannage-rideau-metallique-drm-reparation.webp"
               alt="Technicien DRM Corbeil-Essonnes en intervention sur rideau metallique"
               title="Depannage rideau metallique Corbeil-Essonnes"
               style={{
