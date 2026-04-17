@@ -1,0 +1,52 @@
+{
+  "template_id": "template-10",
+  "template_name": "CitiRise",
+  "template_source": "https://citirise-template.framer.website/",
+  "ville": "Corbeil-Essonnes",
+  "departement": "Essonne",
+  "departement_code": "91",
+  "telephone": "01 84 18 04 99",
+  "domaine": "depannage-rideau-metallique-corbeil-essonnes.com",
+  "section_mapping": {
+    "hero": "hero",
+    "about": "presentation",
+    "services": "services_drm",
+    "team": "zones_intervention",
+    "gallery": "realisations",
+    "testimonials": "avis_google",
+    "faq": "faq_drm",
+    "blog": "blog",
+    "process": "methode_depannage",
+    "pricing": null,
+    "cta": "cta_urgence",
+    "partners": "logos_confiance",
+    "counter": "stats_confiance"
+  },
+  "missing_sections": ["faq_drm", "zones_intervention", "seo_content"],
+  "design_tokens": {
+    "colors": {
+      "primary": "#1A1F2E",
+      "accent": "#E85D04",
+      "light_bg": "#F5F3EE",
+      "dark_bg": "#0F1419"
+    },
+    "fonts": {
+      "heading": "Space Grotesk",
+      "body": "Space Grotesk"
+    },
+    "layout": {
+      "max_width": 1280,
+      "section_padding": "100px 20px",
+      "card_radius": 12,
+      "button_radius": 26
+    }
+  },
+  "palette": {
+    "inspiration": "Industriel moderne — anthracite + orange cuivre + or ambre. Evocation du passe industriel de Corbeil-Essonnes (Tapisserie des Gobelins, Moulins de la Villette).",
+    "primary": "#1A1F2E",
+    "accent": "#E85D04",
+    "accent_light": "#FFB627",
+    "light_bg": "#F5F3EE"
+  },
+  "created_at": "2026-04-17"
+}

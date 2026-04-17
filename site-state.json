@@ -1,0 +1,46 @@
+{
+  "secteur": "rideau-metallique-mega",
+  "ville": "Corbeil-Essonnes",
+  "slug": "corbeil-essonnes",
+  "domaine": "depannage-rideau-metallique-corbeil-essonnes.com",
+  "telephone": "01 84 18 04 99",
+  "nom_entreprise": "DRM Corbeil-Essonnes",
+  "adresse": "106 Rue de Gournay, 91100 Corbeil-Essonnes",
+  "template_source": "template-10 CitiRise — construction-dark-red reinterprete avec palette anthracite + orange cuivre + or ambre",
+  "current_phase": 0,
+  "phases": {
+    "0": {
+      "status": "completed",
+      "completed_at": null
+    },
+    "1": {
+      "status": "pending",
+      "completed_at": null
+    },
+    "2": {
+      "status": "pending",
+      "completed_at": null
+    },
+    "3": {
+      "status": "pending",
+      "completed_at": null
+    },
+    "4": {
+      "status": "pending",
+      "completed_at": null
+    },
+    "5": {
+      "status": "pending",
+      "completed_at": null
+    },
+    "6": {
+      "status": "pending",
+      "completed_at": null
+    },
+    "7": {
+      "status": "pending",
+      "completed_at": null
+    }
+  },
+  "pages_validated": {}
+}

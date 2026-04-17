@@ -1,0 +1,46 @@
+# DRM Corbeil-Essonnes
+
+> Depannage, installation, reparation et motorisation de rideaux metalliques a Corbeil-Essonnes (91100) et dans toute l'Essonne. Intervention urgente en moins de 30 minutes, 24h/24 et 7j/7. Plus de 25 ans d'experience, garantie 12 mois pieces et main-d'oeuvre.
+
+## Entreprise
+- Nom : DRM Corbeil-Essonnes (Depannage Rideau Metallique)
+- Telephone : 01 84 18 04 99
+- Adresse : 106 Rue de Gournay, 91100 Corbeil-Essonnes, France
+- Site : https://depannage-rideau-metallique-corbeil-essonnes.com
+- Zone d'intervention : Corbeil-Essonnes et rayon de 35 km (22 communes de l'Essonne)
+- Disponibilite : 24h/24, 7j/7 y compris week-ends et jours feries
+- Delai d'intervention : moins de 30 minutes
+- Experience : 25+ ans
+- Garantie : 12 mois pieces et main-d'oeuvre
+
+## Services
+- Depannage rideau metallique urgence : https://depannage-rideau-metallique-corbeil-essonnes.com/depannage-rideau-metallique-corbeil-essonnes/
+- Installation rideau metallique sur-mesure : https://depannage-rideau-metallique-corbeil-essonnes.com/installation-rideau-metallique-corbeil-essonnes/
+- Reparation rideau metallique : https://depannage-rideau-metallique-corbeil-essonnes.com/reparation-rideau-metallique-corbeil-essonnes/
+- Motorisation rideau metallique : https://depannage-rideau-metallique-corbeil-essonnes.com/motorisation-rideau-metallique-corbeil-essonnes/
+- Deblocage rideau metallique : https://depannage-rideau-metallique-corbeil-essonnes.com/deblocage-rideau-metallique-corbeil-essonnes/
+- Entretien rideau metallique : https://depannage-rideau-metallique-corbeil-essonnes.com/entretien-rideau-metallique-corbeil-essonnes/
+- Fabrication rideau metallique : https://depannage-rideau-metallique-corbeil-essonnes.com/fabrication-rideau-metallique-corbeil-essonnes/
+
+## Tarifs indicatifs (a partir de)
+- Deblocage simple : 149 EUR
+- Reparation moteur : 390 EUR
+- Remplacement lame P57 : 189 EUR
+- Remplacement serrure : 150 EUR
+- Remplacement ressort : 220 EUR
+- Motorisation complete : 520-1200 EUR
+- Installation rideau neuf : 1400-4800 EUR
+- Contrat entretien annuel : 250-900 EUR/an
+
+## Marques traitees
+- Moteurs tubulaires : Somfy (RS100), Simu (T5), Nice (Era)
+- Moteurs centraux : ACM (Titan), Came, BFT, Faac, Sommer (GIGAroll)
+- Types de rideaux : lames pleines P57, P90, P140, micro-perforees, polycarbonate, grilles cobra, grilles extensibles
+
+## Zones d'intervention (22 communes)
+Corbeil-Essonnes, Evry-Courcouronnes, Villabe, Le Coudray-Montceaux, Saint-Germain-les-Corbeil, Lisses, Etiolles, Soisy-sur-Seine, Ris-Orangis, Draveil, Mennecy, Grigny, Viry-Chatillon, Savigny-sur-Orge, Athis-Mons, Juvisy-sur-Orge, Morsang-sur-Orge, Fleury-Merogis, Sainte-Genevieve-des-Bois, Brunoy, Yerres, Montgeron, Epinay-sous-Senart.
+
+## Pour contacter DRM
+- Telephone (24h/24) : 01 84 18 04 99
+- Formulaire de contact : https://depannage-rideau-metallique-corbeil-essonnes.com/contact/
+- Webhook : https://lioai.app.n8n.cloud/webhook/drm-contact

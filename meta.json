@@ -1,0 +1,52 @@
+{
+  "id": "template-10",
+  "name": "CitiRise",
+  "source": "https://citirise-template.framer.website/",
+  "style": "construction-dark-red",
+  "match_score": 95,
+  "sections": [
+    "hero-dark-split-ticker",
+    "about-stats-row",
+    "projects-bento-grid",
+    "services-4cards-icons",
+    "testimonials-dark-single",
+    "partners-tabs-logos",
+    "blog-asymmetric",
+    "cta-overlay-red",
+    "footer-dark-4cols"
+  ],
+  "colors": {
+    "primary_dark": "#1C1D1B",
+    "accent_red": "#E12D36",
+    "light_bg": "#F0F1EF",
+    "white": "#FFFFFF",
+    "text_gray": "#6B6B6B"
+  },
+  "fonts": {
+    "heading": "Space Grotesk",
+    "body": "Space Grotesk"
+  },
+  "layout": {
+    "max_width": 1280,
+    "container_padding": "150px 0px",
+    "inner_padding": "0px 20px",
+    "card_radius": 12,
+    "button_radius": 26,
+    "button_height": 40
+  },
+  "best_for": ["construction", "batiment", "renovation", "artisan", "depannage"],
+  "created_at": "2026-04-02",
+  "placeholder_images": true,
+  "section_mapping": {
+    "hero": "hero",
+    "about": "presentation",
+    "projects": "realisations",
+    "services": "services_drm",
+    "testimonials": "avis_google",
+    "partners": "logos_confiance",
+    "blog": "blog",
+    "cta": "cta_urgence",
+    "footer": "footer"
+  },
+  "missing_sections": ["faq_drm", "zones_intervention", "seo_content", "process"]
+}

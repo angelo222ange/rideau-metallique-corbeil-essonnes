@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://depannage-rideau-metallique-corbeil-essonnes.com/sitemap.xml
