@@ -1,3 +1,6 @@
+import fs from "fs";
+import path from "path";
+
 export interface Article {
   slug: string;
   title: string;
@@ -6,9 +9,17 @@ export interface Article {
   date: string;
   category: string;
   content: string;
+  intro?: string;
+  tldr?: string;
+  sections?: Array<{ h2?: string; title?: string; content?: string; list?: Array<{ title?: string; description?: string }>; table?: { headers?: string[]; rows?: string[][] } }>;
+  faq?: Array<{ question?: string; answer?: string }>;
+  conclusion?: string;
+  internalLinks?: Array<{ text?: string; href?: string; rel?: string; target?: string }>;
+  externalLinks?: Array<{ text?: string; href?: string; source?: string; rel?: string; target?: string }>;
+  jsonld?: any;
 }
 
-export const articles: Article[] = [
+const legacyArticles: Article[] = [
   {
     slug: "pannes-frequentes-rideau-metallique",
     title: "Top 5 des pannes de rideau metallique et comment les reparer",
@@ -123,3 +134,117 @@ export const articles: Article[] = [
     `.trim(),
   },
 ];
+
+// ── Dynamic loader: JSON articles in content/blog/ pushed by BlogEngine
+// are merged into the articles export so new articles appear without editing
+// this file. Legacy hardcoded entries win on slug clash.
+
+function paragraphize(text: string): string {
+  if (!text) return "";
+  return text
+    .split(/\n\s*\n|\n/)
+    .map((s) => s.trim())
+    .filter(Boolean)
+    .map((s) => `<p>${s}</p>`)
+    .join("\n");
+}
+
+function renderSectionList(list?: Array<{ title?: string; description?: string }>): string {
+  if (!list || list.length === 0) return "";
+  const items = list
+    .map((it) => {
+      const t = it.title ? `<strong>${it.title}</strong>` : "";
+      const d = it.description || "";
+      return `<li>${t}${t && d ? " — " : ""}${d}</li>`;
+    })
+    .join("");
+  return `<ul>${items}</ul>`;
+}
+
+function renderSectionTable(table?: { headers?: string[]; rows?: string[][] }): string {
+  if (!table || !Array.isArray(table.rows) || table.rows.length === 0) return "";
+  const head = Array.isArray(table.headers) && table.headers.length
+    ? `<thead><tr>${table.headers.map((h) => `<th>${h}</th>`).join("")}</tr></thead>`
+    : "";
+  const body = `<tbody>${table.rows
+    .map((row) => `<tr>${row.map((c) => `<td>${c}</td>`).join("")}</tr>`)
+    .join("")}</tbody>`;
+  return `<table>${head}${body}</table>`;
+}
+
+function buildHtmlFromStructured(a: any): string {
+  const parts: string[] = [];
+  if (a.intro) parts.push(paragraphize(a.intro));
+  if (a.tldr) parts.push(`<aside class="blog-tldr"><div class="blog-tldr-label">En bref</div>${paragraphize(a.tldr)}</aside>`);
+  if (Array.isArray(a.sections)) {
+    for (const s of a.sections) {
+      const heading = s.h2 || s.title;
+      if (heading) parts.push(`<h2>${heading}</h2>`);
+      if (s.content) parts.push(paragraphize(s.content));
+      const ul = renderSectionList(s.list);
+      if (ul) parts.push(ul);
+      const tbl = renderSectionTable(s.table);
+      if (tbl) parts.push(tbl);
+    }
+  }
+  if (Array.isArray(a.faq) && a.faq.length) {
+    parts.push(`<h2>Questions frequentes</h2>`);
+    for (const f of a.faq) {
+      if (f.question) parts.push(`<h3>${f.question}</h3>`);
+      if (f.answer) parts.push(paragraphize(f.answer));
+    }
+  }
+  if (Array.isArray(a.internalLinks) && a.internalLinks.length) {
+    const items = a.internalLinks.map((l: any) => `<li><a href="${l.href || "#"}">${l.text || l.href}</a></li>`).join("");
+    parts.push(`<h2>Pour aller plus loin</h2><ul>${items}</ul>`);
+  }
+  if (a.conclusion) parts.push(`<h2>Conclusion</h2>${paragraphize(a.conclusion)}`);
+  if (Array.isArray(a.externalLinks) && a.externalLinks.length) {
+    const items = a.externalLinks
+      .map((l: any) => {
+        const rel = l.rel || "nofollow noopener";
+        return `<li><a href="${l.href || "#"}" rel="${rel}" target="${l.target || "_blank"}">${l.text || l.href}</a></li>`;
+      })
+      .join("");
+    parts.push(`<h3>Sources</h3><ul>${items}</ul>`);
+  }
+  return parts.join("\n");
+}
+
+function loadJsonArticles(): Article[] {
+  const dir = path.join(process.cwd(), "content", "blog");
+  const out: Article[] = [];
+  try {
+    for (const f of fs.readdirSync(dir)) {
+      if (!f.endsWith(".json") || f === "articles.json") continue;
+      try {
+        const json = JSON.parse(fs.readFileSync(path.join(dir, f), "utf-8")) as any;
+        const hasStructured = json.intro || json.tldr || Array.isArray(json.sections);
+        const content = hasStructured
+          ? buildHtmlFromStructured(json)
+          : (typeof json.content === "string" ? json.content : "");
+        out.push({
+          slug: json.slug || f.replace(/\.json$/, ""),
+          title: json.title || "",
+          excerpt: json.excerpt || json.metaDescription || "",
+          image: json.image || "",
+          date: json.date || json.dateISO || "",
+          category: json.category || "Blog",
+          content,
+        });
+      } catch {
+        // Skip malformed JSON — build must not break
+      }
+    }
+  } catch {
+    // content/blog missing — legacy only
+  }
+  return out;
+}
+
+const jsonArticles = loadJsonArticles();
+const legacySlugs = new Set(legacyArticles.map((a) => a.slug));
+export const articles: Article[] = [
+  ...legacyArticles,
+  ...jsonArticles.filter((a) => !legacySlugs.has(a.slug)),
+].sort((a, b) => (b.date || "").localeCompare(a.date || ""));
